@@ -44,7 +44,7 @@ def enough_money(coffee_type):
     elif inserted_amount == 0:
         print("0 coin inserted")
     else:
-        print("Sorry that's not enough money. Money refunded.")
+        print(f"Sorry that's not enough money. Money refunded. You need ${required_money(coffee_type)} for {coffee_type}")
         return False
 
 
