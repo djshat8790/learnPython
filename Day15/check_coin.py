@@ -9,7 +9,7 @@ def get_money():
 
 def set_money(amount):
     global money
-    money = get_money() + amount
+    money = round(get_money() + amount, 2)
 
 
 def calculate_coin():
@@ -17,11 +17,16 @@ def calculate_coin():
     amount_inserted = 0.00
     print("\nInsert Coin:")
     for coin in coin_list:
-        insert_coin = input(f"{coin}: ")
-        if insert_coin != "":
-            amount_inserted += float(insert_coin) * coin_list[coin]
-        else:
-            amount_inserted += 0.0 * coin_list[coin]
+        while True:
+            try:
+                insert_coin = input(f"{coin}: ")
+                if insert_coin == "":
+                    amount_inserted += 0.0 * coin_list[coin]
+                else:
+                    amount_inserted += float(insert_coin) * coin_list[coin]
+                break
+            except ValueError:
+                print("Oops!  That was no valid amount.  Try again...")
     return amount_inserted
 
 
@@ -36,6 +41,8 @@ def enough_money(coffee_type):
         set_money(gain)
         print(f"\nHere is ${change} dollars in change")
         return True
+    elif inserted_amount == 0:
+        print("0 coin inserted")
     else:
         print("Sorry that's not enough money. Money refunded.")
         return False

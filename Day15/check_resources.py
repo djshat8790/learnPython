@@ -48,26 +48,17 @@ def refill_resources():
 
 
 def check_resources(resource_coffee_type):
-    if resource_coffee_type == "espresso":
-        if not check_water(resource_coffee_type):
-            print("Sorry there is not enough water.")
-            return False
-        if not check_coffee(resource_coffee_type):
-            print("Sorry there is not enough coffee.")
-            return False
-        else:
-            return True
-    elif resource_coffee_type == "latte" or resource_coffee_type == "cappuccino":
-        if not check_water(resource_coffee_type):
-            print("Sorry there is not enough water.")
-            return False
-        if not check_coffee(resource_coffee_type):
-            print("Sorry there is not enough coffee.")
-            return False
+    if resource_coffee_type == "latte" or resource_coffee_type == "cappuccino":
         if not check_milk(resource_coffee_type):
             print("Sorry there is not enough milk.")
             return False
         else:
             return True
-
-
+    if not check_water(resource_coffee_type):
+        print("Sorry there is not enough water.")
+        return False
+    if not check_coffee(resource_coffee_type):
+        print("Sorry there is not enough coffee.")
+        return False
+    else:
+        return True
