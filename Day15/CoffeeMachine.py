@@ -27,5 +27,4 @@ def coffee_machine():
         else:
             print("Please enter the correct coffee.")
 
-
 coffee_machine()
