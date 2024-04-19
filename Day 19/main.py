@@ -42,7 +42,7 @@ def race_begin():
                     next_game = False
                     winning_color = turtle.pencolor()
                     if winning_color == user_bet:
-                        messagebox.showinfo(title="WINNER !", message=f"You win. {} {winning_color} turtle is the winner")
+                        messagebox.showinfo(title="WINNER !", message=f"You win. {winning_color} turtle is the winner")
                     else:
                         messagebox.showinfo(title="LOOSER !", message=f"You lose. {winning_color} turtle is the winner")
         user_input = screen.textinput(title="Turtle Race ",
