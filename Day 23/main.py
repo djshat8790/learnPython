@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+from turtle import Screen
 from player import Player
 from cars import Cars
 from road import Road
@@ -23,14 +23,13 @@ score = Score()
 screen.listen()
 screen.onkeypress(player.move_player, "Up")
 
-
 is_game_on = True
 loop_count = 1
 while is_game_on:
     loop_count += 1
     screen.update()
     time.sleep(0.1)
-    if loop_count == 6:
+    if loop_count == 5:
         car.create_car()
         loop_count = 0
     car.move_car()
@@ -42,11 +41,5 @@ while is_game_on:
         player.player_reset()
         car.car_speed += 5
         score.level_up()
-
-
-
-
-
-
 
 screen.exitonclick()

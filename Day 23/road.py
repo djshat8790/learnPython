@@ -34,7 +34,8 @@ class Road:
                     new_patch.up()
                 new_patch.forward(20)
 
-    def finish_line(self):
+    @staticmethod
+    def finish_line():
         road = Turtle()
         writing = Turtle()
         writing.penup()

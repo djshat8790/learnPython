@@ -1,7 +1,6 @@
-import time
+
 from turtle import Turtle
 import random
-from player import Player
 
 CAR_POSITION = [-220, -180, -140, -100, -60, -20, 20, 60, 100, 140, 180, 220, 260]
 CAR_COLOR = ["red", "magenta", "yellow", "blue", "purple", "pink", "violet", "indigo", "orange", "cyan"]
