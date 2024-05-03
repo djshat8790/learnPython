@@ -7,7 +7,7 @@ class Player(Turtle):
         super().__init__()
         self.shape("turtle")
         self.penup()
-        self.color("#D21F3C")
+        self.color("yellow")
         self.goto(0, -265)
         self.setheading(90)
 

@@ -35,11 +35,12 @@ while is_game_on:
     car.move_car()
     for cars in car.car_list:
         if cars.distance(player) < 30:
-            score.game_over()
             is_game_on = False
+            score.game_over()
     if player.ycor() == 295:
         player.player_reset()
         car.car_speed += 5
         score.level_up()
+
 
 screen.exitonclick()
