@@ -1,0 +1,9 @@
+Dear [NAME],
+
+Here is your daily quotes for your motivation.
+
+[QUOTES]
+
+Have a good day!
+
+Dheeraj

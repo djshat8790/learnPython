@@ -16,7 +16,7 @@ class Cars:
     def create_car(self):
         car = Turtle()
         car.penup()
-        car.shape("turtle")
+        car.shape("square")
         car.shapesize(stretch_wid=1, stretch_len=2)
         car.color(random.choice(CAR_COLOR))
         car.setheading(180)

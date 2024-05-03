@@ -13,7 +13,7 @@ rgb_colors = []
 
 
 def extract_color():
-    colors = colorgram.extract("py.jpg", 50)
+    colors = colorgram.extract("chess.jpg", 50)
     for color in colors:
         r = color.rgb.r
         g = color.rgb.g
