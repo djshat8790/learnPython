@@ -3,7 +3,7 @@ import smtplib
 import pandas
 
 my_email = "dheeraj.shukla8790spain@gmail.com"
-my_password = "xyna otqs mojz lrzp"
+my_password = ""
 
 with open(file="quotes.txt") as quote:
     quote_list = pandas.Series(quote)

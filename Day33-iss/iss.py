@@ -4,8 +4,8 @@ import smtplib
 
 MY_LAT = 40.416775
 MY_LONG = -3.703790
-my_email = "dheeraj.shukla8790spain@gmail.com"
-my_password = "xyna otqs mojz lrzp"
+my_email = "My Email"
+my_password = ""
 
 
 def is_iss_close():
