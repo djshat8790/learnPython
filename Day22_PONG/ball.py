@@ -1,4 +1,7 @@
+import random
 from turtle import Turtle
+
+move = [-1, 1]
 
 
 class Ball(Turtle):
@@ -8,10 +11,12 @@ class Ball(Turtle):
         self.penup()
         self.shape("circle")
         self.color("blue")
-        self.x_move = 10
-        self.y_move = 10
+        new_direction = random.choice(move)
+        self.x_move = 10 * new_direction
+        self.y_move = 10 * new_direction
 
     def move_ball(self):
+
         new_x = self.xcor() + self.x_move
         new_y = self.ycor() + self.y_move
         self.goto(new_x, new_y)
@@ -21,3 +26,8 @@ class Ball(Turtle):
 
     def bounce_paddle(self):
         self.x_move *= -1
+
+    def refresh(self):
+        self.goto(0, 0)
+        self.bounce_paddle()
+        self.bounce_wall()
